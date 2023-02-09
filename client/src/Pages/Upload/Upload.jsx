@@ -1,5 +1,5 @@
 import React from 'react'
-import DragAndDrop from '../../Components/DragAndDrop/DragAndDrop'
+import DropArea from '../../Components/DropArea/DropArea'
 import './Upload.css'
 
 function Upload() {
@@ -7,7 +7,7 @@ function Upload() {
     <div className='Upload'>
         <h1>Upload your image</h1>
         <p className='Upload__paragraph'>File should be Jpeg, Png,...</p>
-        <DragAndDrop />
+        <DropArea />
     </div>
   )
 }
