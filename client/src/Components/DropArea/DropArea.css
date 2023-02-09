@@ -1,0 +1,67 @@
+.DropArea {
+    display: flex;
+    flex-direction: column;
+    max-width: 338px;
+    width: 100%;
+}
+
+.DropArea__dashed {
+    background: #F6F8FB;
+    border-radius: 12px;
+    padding: 35.84px 0 39.57px 0;
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.3s;
+}
+.DropArea__dashed.active {
+    background: #e0e6f0;
+}
+
+.DropArea__dashed > div {
+    height: 88.24px;
+    margin-bottom: 37.26px;
+}
+
+.DropArea__dashed > span {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.035em;
+    color: #BDBDBD;
+}
+
+.DropArea__dashed > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /* pointer-events: none; */
+}
+
+.DropArea__or {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.035em;
+    color: #BDBDBD;
+    margin: 18.91px 0 21.62px 0;
+}
+
+.DropArea__ChooseFile {
+    background: #2F80ED;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: -0.035em;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    max-width: 101px;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
