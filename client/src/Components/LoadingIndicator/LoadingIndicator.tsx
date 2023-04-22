@@ -3,7 +3,7 @@ import './LoadingIndicator.css'
 
 function LoadingIndicator() {
 	return (
-    <div className='LoadingIndicator'>
+    <div>
     	<span>Uploading...</span>
       	<div className='LoadingIndicator__divIndicator'>
         	<div></div>
