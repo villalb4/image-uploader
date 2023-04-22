@@ -19,7 +19,7 @@ const DropArea = () => {
 	const handleUpload = () => {
 		console.log("linea 22: ", imageBase64)
 	}
-	imageBase64 !== "" && handleUpload()
+	imageBase64.size !== 0 && handleUpload()
 	
 
   return (
