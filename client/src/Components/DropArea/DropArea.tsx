@@ -22,7 +22,7 @@ const DropArea = () => {
 	imageBase64.size !== 0 && handleUpload()
 	
 
-  return (
+	return (
 		<div className='DropArea'>
 			<div 
 			className={drag ? 'DropArea__dashed active' : 'DropArea__dashed'}

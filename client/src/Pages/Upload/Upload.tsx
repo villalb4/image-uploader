@@ -5,8 +5,8 @@ import LoadingIndicator from "../../Components/LoadingIndicator/LoadingIndicator
 
 function Upload() {
   return (
-    <div className={false ? "Upload": "Upload loading"}>
-      {false ? (
+    <div className={true ? "Upload": "Upload loading"}>
+      {true ? (
         <>
           <h1>Upload your image</h1>
           <p className="Upload__paragraph">File should be Jpeg, Png,...</p>
