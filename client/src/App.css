@@ -8,3 +8,23 @@
   font-style: normal;
   font-weight: 500;
 }
+
+.bodyComponent {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 36px 32px;
+  text-align: center;
+  height :469px;
+  max-width: 402px;
+  width: 100%;
+  transition: all ease 0.3s;
+}
+.bodyComponent.loading {
+padding: 36px 30px 43.82px 30px;
+  height: 142px;
+}
+.bodyComponent.successfully {
+  padding: 36px 31.18px 33.35px 31.18px;
+  height: 454.96px;
+}
