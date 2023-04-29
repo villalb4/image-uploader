@@ -7,9 +7,9 @@ function LinkCopy() {
         <span className="LinkCopy__link">
           https://images.yourdomain.com/photo-1496950866446-325...
         </span>
-      <div className="LinkCopy__divButton">
-        <button>Copy Link</button>
-      </div>
+
+        <button className="LinkCopy__button">Copy Link</button>
+      
     </div>
   );
 }

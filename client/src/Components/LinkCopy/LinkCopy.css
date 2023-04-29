@@ -3,12 +3,11 @@
  gap: 14px;
  border-radius: 8px;
  max-width: 338px;
- height: 34px;
  background-color: #F6F8FB;
  border: 1px solid #E0E0E0;
  justify-content: space-between;
  align-items: center;
- padding: 1px;
+padding: 1px;
 }
 .LinkCopy__link {
   max-width: 240px;
@@ -23,9 +22,11 @@
   line-height: 12px;
   margin-left: 7.12px;
 }
-.LinkCopy__divButton > button {
-  width: 74px;
+.LinkCopy__button {
+  max-width: 74px;
+  width: 100%;
   height: 30px;
+  margin: 0;
   border-radius: 8px;
   background-color: #2F80ED;
   border: none;
