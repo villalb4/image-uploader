@@ -1,10 +1,12 @@
-const { Client } = require('pg')
-require('dotenv').config()
+// ------ no fue necesario pero lo dejo de ejemplo ------
 
-const client = new Client({
-    connectionString: process.env.DATABASE_URL
-})
+// const { Client } = require('pg')
+// require('dotenv').config()
 
-client.connect()
+// const client = new Client({
+//     connectionString: process.env.DATABASE_URL
+// })
 
-module.exports = client
+// client.connect()
+
+// module.exports = client
