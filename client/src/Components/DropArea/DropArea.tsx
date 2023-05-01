@@ -3,7 +3,8 @@ import "./DropArea.css";
 import mountains from "../../Assets/image.svg";
 import dashed from "../../Assets/dashed.svg";
 import UseImageConvert from "../../Hooks/useImageConvert";
-import UseUpload from "../../Hooks/useUpload";
+import { useDispatch } from "react-redux";
+import { submitImage } from "../../Redux/thunks/submitImage";
 
 type InputRef = React.RefObject<HTMLInputElement>;
 
@@ -11,12 +12,16 @@ const DropArea = () => {
   const inputRef: InputRef = useRef(null);
   const [drag, setDrag] = useState(false);
   const { imageBase64, handleImageChange } = UseImageConvert();
-	UseUpload(imageBase64.dataURL || "");
+
+  const dispatch = useDispatch()
+  
+  if(imageBase64.size !== 0) {
+    dispatch(submitImage(imageBase64.dataURL || "") as any)
+  }
 
   const handleOpenFile = () => {
     inputRef?.current?.click();
   };
-
 
   return (
     <div className="DropArea">
