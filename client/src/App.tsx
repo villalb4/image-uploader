@@ -1,24 +1,25 @@
-import React from "react";
 import "./App.css";
 import Upload from "./Pages/Upload/Upload";
 import LoadingIndicator from "./Components/LoadingIndicator/LoadingIndicator";
 import Successfully from "./Pages/Successfully/Successfully";
+import { useSelector } from "react-redux/es/exports";
+import { RootState } from "./Redux/store/store";
 
 function App() {
-  const hola: string = "hola";
+  const imageStage = useSelector( (state: RootState) => state?.image.stage)
   const classStyles =
-    hola === "hola"
+  imageStage === "empty"
       ? "bodyComponent"
-      : hola === "chau"
+      : imageStage === "submit"
       ? "bodyComponent loading"
       : "bodyComponent successfully";
-      
+
   return (
     <div className="App">
       <div className={classStyles}>
-        {hola === "hola" && <Upload />}
-        {hola === "chau" && <LoadingIndicator />}
-        {hola === "hi" && <Successfully />}
+        {imageStage === "empty" && <Upload />}
+        {imageStage === "submit" && <LoadingIndicator />}
+        {imageStage === "loaded" && <Successfully />}
       </div>
     </div>
   );
