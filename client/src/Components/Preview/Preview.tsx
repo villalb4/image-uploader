@@ -8,7 +8,7 @@ function Preview() {
 
   return (
     <div className='preview'>
-      <div>
+      <div className='preview_divContainer'>
         <img src={image} alt="imagen cargada" />
       </div>
     </div>
