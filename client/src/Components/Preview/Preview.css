@@ -3,7 +3,14 @@
   max-width: 338px;
   width: 100%;
   border-radius: 12px;
+  overflow: hidden;
 }
 .preview_divContainer {
   height: 224.4px;
+  max-width: 338px;
+  width: 100%;
+}
+.preview_image {
+  width: 338px;
+  width: 100%;
 }
