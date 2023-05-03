@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./DropArea.css";
 import mountains from "../../Assets/image.svg";
 import dashed from "../../Assets/dashed.svg";
@@ -15,9 +15,11 @@ const DropArea = () => {
 
   const dispatch = useDispatch()
   
-  if(imageBase64.size !== 0) {
-    dispatch(submitImage(imageBase64.dataURL || "") as any)
-  }
+  useEffect(() => {
+    if(imageBase64.size !== 0) {
+      dispatch(submitImage(imageBase64.dataURL || "") as any)
+    }
+  }, [imageBase64, dispatch])
 
   const handleOpenFile = () => {
     inputRef?.current?.click();
