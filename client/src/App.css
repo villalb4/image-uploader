@@ -20,11 +20,19 @@
   width: 100%;
   transition: all ease 0.3s;
 }
-.bodyComponent.loading, .bodyComponent.error {
+.bodyComponent.loading {
   padding: 36px 30px 43.82px 30px;
   height: 142px;
 }
 .bodyComponent.successfully {
   padding: 36px 31.18px 33.35px 31.18px;
   height: 454.96px;
+}
+.bodyComponent.error {
+  padding: 36px 30px 43.82px 30px;
+  height: 142px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4F4F4F;
 }
