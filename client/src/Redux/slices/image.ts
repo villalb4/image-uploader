@@ -18,11 +18,7 @@ const imageSlice = createSlice({
       state.imageUrl = action.payload;
     },
     setStage: function (state, action) {
-      if (action.payload === "submit") {
-        state.stage = action.payload;
-      } else {
-        state.stage = action.payload;
-      }
+      state.stage = action.payload;
     },
   },
 });
