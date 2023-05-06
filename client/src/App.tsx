@@ -4,6 +4,7 @@ import LoadingIndicator from "./Components/LoadingIndicator/LoadingIndicator";
 import Successfully from "./Pages/Successfully/Successfully";
 import { useSelector } from "react-redux/es/exports";
 import { RootState } from "./Redux/store/store";
+import Error from "./Components/Error/Error";
 
 function App() {
   const imageStage = useSelector( (state: RootState) => state?.image.stage)
@@ -12,7 +13,9 @@ function App() {
       ? "bodyComponent"
       : imageStage === "submit"
       ? "bodyComponent loading"
-      : "bodyComponent successfully";
+      : imageStage === "loaded" 
+      ? "bodyComponent successfully"
+      : "bodyComponent error"
 
   return (
     <div className="App">
@@ -20,6 +23,7 @@ function App() {
         {imageStage === "empty" && <Upload />}
         {imageStage === "submit" && <LoadingIndicator />}
         {imageStage === "loaded" && <Successfully />}
+        {imageStage === "error" && <Error />}
       </div>
     </div>
   );
